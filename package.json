@@ -9,9 +9,25 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^7.0.1",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.11.0",
+    "csv-stringify": "^6.9.0",
+    "date-fns": "^4.4.0",
+    "dotenv": "^18.0.9",
+    "framer-motion": "^14.9.0",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^1.66.0",
+    "mongoose": "^9.11.4",
+    "multer": "^2.5.0",
     "next": "16.4.3",
+    "next-auth": "^5.0.0-beta.32",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "react-hook-form": "^7.91.0",
+    "recharts": "^3.10.1",
+    "tesseract.js": "^7.0.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",

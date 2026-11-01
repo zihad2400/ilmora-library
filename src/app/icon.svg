@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1228"/>
+      <stop offset="100%" stop-color="#070b1a"/>
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="url(#bgGrad)"/>
+  
+  <!-- Book -->
+  <path d="M 25 30 Q 50 25 50 40 L 50 75 Q 50 60 25 65 Z" fill="url(#bookGrad)" filter="url(#glow)"/>
+  <path d="M 75 30 Q 50 25 50 40 L 50 75 Q 50 60 75 65 Z" fill="url(#bookGrad)" filter="url(#glow)"/>
+  
+  <!-- Book Spine -->
+  <line x1="50" y1="35" x2="50" y2="75" stroke="#ffffff" stroke-width="2" stroke-opacity="0.5"/>
+</svg>
