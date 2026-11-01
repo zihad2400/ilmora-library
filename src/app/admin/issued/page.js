@@ -5,7 +5,6 @@ import { connection } from "next/server";
 export const instant = false;
 
 export default async function AdminIssuedBooksPage() {
-  // Next.js 16 ডাইনামিক রেন্ডারিং ফিক্স
   await connection();
   await connectDB();
 

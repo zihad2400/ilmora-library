@@ -1,11 +1,13 @@
 import { connectDB } from "@/lib/db";
 import User from "@/models/User";
-import Link from "next/link";
+import { connection } from "next/server";
 
 export const instant = false;
 
 export default async function AdminReadersPage() {
+  await connection();
   await connectDB();
+  
   const readers = await User.find({ role: "READER" }).sort({ createdAt: -1 }).lean();
 
   return (
