@@ -32,5 +32,19 @@ export async function connectDB() {
   }
 
   cached.conn = await cached.promise;
+
+  // মডেলগুলো রেজিস্টার করা (শুধুমাত্র প্রোডাকশনে বিল্ড এরর এড়াতে)
+  // এই ইমপোর্টগুলো ডাইনামিকভাবে করা হচ্ছে যাতে সার্কুলার ডিপেন্ডেন্সি না হয়
+  await import("@/models/User");
+  await import("@/models/Book");
+  await import("@/models/Author");
+  await import("@/models/Publisher");
+  await import("@/models/Category");
+  await import("@/models/BookCopy");
+  await import("@/models/BorrowRequest");
+  await import("@/models/BorrowRecord");
+  await import("@/models/Notification");
+  await import("@/models/LibrarySettings");
+
   return cached.conn;
 }
